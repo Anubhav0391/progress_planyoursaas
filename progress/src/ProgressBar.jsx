@@ -33,7 +33,9 @@ const ProgressBar = ({ label, value, icon, inprogress }) => {
       ? (inprogress === "industry_analysis" && index === 0) ||
         (inprogress === "icp_graph" && index === 1)
       : inprogress;
-    console.log(label == "Collective Reports" ? {showProgress,inprogress,index} : "");
+    console.log(
+      label == "Collective Reports" ? { showProgress, inprogress, index } : ""
+    );
     return (
       <SliderThumb {...other}>
         {children}
@@ -67,11 +69,12 @@ const ProgressBar = ({ label, value, icon, inprogress }) => {
   }
   return (
     <Stack
-      spacing={label == "Collective Reports" ? "35px" : "20px"}
+      spacing={label == "Collective Reports" ? {xs:0,md:"35px"} : "20px"}
       width={"100%"}
       alignItems="center"
     >
       <Typography
+        display={label == "Collective Reports" ?{ xs: "none", md: "block" }:'block'}
         width={label == "Collective Reports" ? "100%" : "90px"}
         fontWeight={500}
         fontFamily={"poppins"}

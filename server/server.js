@@ -22,7 +22,7 @@ const processesOrder = [
 
 const planProcessesOrder = ["industry_analysis", "icp_graph"];
 
-const getRandomDelay = () => Math.floor(Math.random() * 30000) + 30000; // Random delay between 30s and 1 min
+const getRandomDelay = () => Math.floor(Math.random() * 1000) + 1000; // Random delay between 30s and 1 min
 
 const updateStatus = (currentStatus) => {
   for (let i = 0; i < processesOrder.length; i++) {
